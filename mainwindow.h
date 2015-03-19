@@ -17,9 +17,9 @@ protected:
     void closeEvent(QCloseEvent *);
 private slots:
     void newFile();
-    /*bool save();
+    bool save();
     bool saveAs();
-    void process();*/
+    /*void process();*/
 private:
     void createActions();
     void createMenus();
@@ -35,13 +35,20 @@ private:
 
     // Menus
     QMenu *fileMenu;
-    QMenu *helpMenu;
+    QMenu *editMenu;
 
     // Toolbars
     QToolBar *fileToolbar;
+    QToolBar *serviceToolbar;
+    QToolBar *helpToolbar;
 
     // Actions
     QAction *newAction;
+    QAction *saveAction;
+    QAction *helpAction;
+    QAction *detectAction;
+    QAction *selectAction;
+    QAction *changeViewAction;
     QAction *exitAction;
     QAction *aboutQtAction;
 };
